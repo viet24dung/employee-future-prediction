@@ -3,6 +3,7 @@ import warnings
 warnings.filterwarnings(action="ignore")
 
 import hydra
+import dagshub
 import joblib
 import mlflow
 import pandas as pd
@@ -46,6 +47,10 @@ def log_metrics(**metrics: dict):
 @hydra.main(version_base=None, config_path="../../config", config_name="main")
 def evaluate(config: DictConfig):
     mlflow.set_tracking_uri(config.mlflow_tracking_ui)
+    # os.environ['MLFLOW_TRACKING_USERNAME'] = config.mlflow_USERNAME
+    # os.environ['MLFLOW_TRACKING_PASSWORD'] = config.mlflow_PASSWORD 
+    # dagshub.init("employee-future-prediction", "thaonguyen274", mlflow=True)
+
 
     with mlflow.start_run():
 

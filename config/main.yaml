@@ -32,4 +32,4 @@ model:
   path: ${model.dir}/${model.name}
 
 
-mlflow_tracking_ui: https://dagshub.com/khuyentran1401/employee-future-prediction.mlflow
+mlflow_tracking_ui: /home/ubuntu/Documents/employee-future-prediciton/mlruns
