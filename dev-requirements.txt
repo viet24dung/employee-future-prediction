@@ -14,8 +14,4 @@ xgboost==1.6.1
 dvc==2.10.2
 pydantic==1.9.1
 pytest==7.1.2
-<<<<<<< HEAD
 bentoml==1.0.16
-=======
-bentoml==1.0.0a7
->>>>>>> ecb688122ccaad92f9d233b1014912015ed86e6f

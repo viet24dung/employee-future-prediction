@@ -1,5 +1,8 @@
 ['remote "origin"']
     url = https://dagshub.com/thaonguyen274/employee-future-prediction.dvc
+<<<<<<< HEAD
     verify = true
     user = thaonguyen274
     password = Ntt272201@
+=======
+>>>>>>> ecb688122ccaad92f9d233b1014912015ed86e6f

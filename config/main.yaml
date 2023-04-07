@@ -31,14 +31,9 @@ model:
   name: xgboost
   path: ${model.dir}/${model.name}
 
-<<<<<<< HEAD
 # mlflow_tracking_ui = https://dagshub.com/thaonguyen274/employee-future-prediction.mlflow
 # mlflow_USERNAME=thaonguyen274 
 # mlflow_PASSWORD=9b36e6679c56d1224a28fb16e98aaff91eb81665 
 mlflow_tracking_ui: https://dagshub.com/thaonguyen274/employee-future-prediction.mlflow 
 mlflow_USERNAME: thaonguyen274 
 mlflow_PASSWORD: 9b36e6679c56d1224a28fb16e98aaff91eb81665 
-=======
-
-mlflow_tracking_ui: /home/ubuntu/Documents/employee-future-prediciton/mlruns
->>>>>>> ecb688122ccaad92f9d233b1014912015ed86e6f

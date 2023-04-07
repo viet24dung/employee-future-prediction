@@ -12,13 +12,8 @@ def load_model(model_path: str):
 @hydra.main(version_base=None, config_path="../../config", config_name="main")
 def save_to_bentoml(config: DictConfig):
     model = load_model(abspath(config.model.path))
-<<<<<<< HEAD
     # bentoml.picklable_model.save(config.model.name, model)
     bentoml.xgboost.save_model(config.model.name, model)
-=======
-    bentoml.picklable_model.save(config.model.name, model)
-
->>>>>>> ecb688122ccaad92f9d233b1014912015ed86e6f
 
 if __name__ == "__main__":
     save_to_bentoml()
