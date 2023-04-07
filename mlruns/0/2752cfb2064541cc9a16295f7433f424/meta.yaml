@@ -1,0 +1,15 @@
+artifact_uri: /home/ubuntu/Documents/employee-future-prediciton/mlruns/0/2752cfb2064541cc9a16295f7433f424/artifacts
+end_time: 1680753212593
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: 2752cfb2064541cc9a16295f7433f424
+run_uuid: 2752cfb2064541cc9a16295f7433f424
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1680753212529
+status: 3
+tags: []
+user_id: ubuntu

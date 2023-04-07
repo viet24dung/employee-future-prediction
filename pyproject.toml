@@ -2,7 +2,7 @@
 name = "employee-future-prediction"
 version = "0.1.0"
 description = ""
-authors = ["Khuyen Tran"]
+authors = ["Thao Nguyen"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
@@ -16,7 +16,12 @@ notebook = "^6.4.10"
 mlflow = "^1.25.1"
 dagshub = "^0.1.8"
 hyperopt = "^0.2.7"
-feature-engine = "^1.2.0"
+streamlit = "^1.8.1"
+patsy = "^0.5.2"
+pandera = "^0.10.1"
+pytest-steps = "^1.8.0"
+numpy = "^1.22.4"
+llvmlite = "0.34.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"

@@ -1,5 +1,5 @@
 defaults:
-  - process: process1
+  - process: process2
   - model: model1
   - _self_
 
@@ -28,8 +28,12 @@ final:
 
 model:
   dir: models
-  name: XGBoost
+  name: xgboost
   path: ${model.dir}/${model.name}
 
-
-mlflow_tracking_ui: https://dagshub.com/khuyentran1401/employee-future-prediction.mlflow
+# mlflow_tracking_ui = https://dagshub.com/thaonguyen274/employee-future-prediction.mlflow
+# mlflow_USERNAME=thaonguyen274 
+# mlflow_PASSWORD=9b36e6679c56d1224a28fb16e98aaff91eb81665 
+mlflow_tracking_ui: https://dagshub.com/thaonguyen274/employee-future-prediction.mlflow 
+mlflow_USERNAME: thaonguyen274 
+mlflow_PASSWORD: 9b36e6679c56d1224a28fb16e98aaff91eb81665 
