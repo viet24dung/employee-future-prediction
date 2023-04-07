@@ -16,7 +16,7 @@ jobs:
         with:
           check: "all"
           target_branch: master
-          target_repository: khuyentran1401/employee-future-prediciton
+          target_repository: th/employee-future-prediciton
           update: true
       
       - name: Add, commit, and push changes
