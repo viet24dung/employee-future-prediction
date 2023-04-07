@@ -16,7 +16,11 @@ jobs:
         with:
           check: "all"
           target_branch: master
+<<<<<<< HEAD
           target_repository: thaonguyen274/employee-future-prediciton
+=======
+          target_repository: thaonguyen274/employee-future-prediciton_
+>>>>>>> ecb688122ccaad92f9d233b1014912015ed86e6f
           update: true
       
       - name: Add, commit, and push changes

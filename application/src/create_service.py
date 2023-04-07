@@ -51,8 +51,14 @@ def transform_data(df: pd.DataFrame):
     return dummy_X.iloc[0, :].values.reshape(1, -1)
 
 
+<<<<<<< HEAD
 model = bentoml.xgboost.get("xgboost:latest").to_runner()
 
+=======
+model = bentoml.picklable_model.load_runner(
+    f"{MODEL_NAME}:latest", method_name="predict"
+)
+>>>>>>> ecb688122ccaad92f9d233b1014912015ed86e6f
 # Create service with the model
 service = bentoml.Service("predict_employee", runners=[model])
 
