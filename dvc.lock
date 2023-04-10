@@ -1,0 +1,37 @@
+schema: '2.0'
+stages:
+  process_data:
+    cmd: python training/src/process.py
+    deps:
+    - path: config/main.yaml
+      md5: b800dbce777bff03fa397a3cba062200
+      size: 991
+    - path: data/raw
+      md5: 876dd6a9663064054530bc03668741c9.dir
+      size: 195247
+      nfiles: 1
+    - path: training/src/process.py
+      md5: c4c1be8b0fbe8e3d8f082e8c184c6288
+      size: 1433
+    outs:
+    - path: data/processed
+      md5: 431cea4c36b796cd8448cc63f0a075c4.dir
+      size: 153771
+      nfiles: 4
+  train_model:
+    cmd: python training/src/train_model.py
+    deps:
+    - path: config/main.yaml
+      md5: b800dbce777bff03fa397a3cba062200
+      size: 991
+    - path: data/processed
+      md5: 431cea4c36b796cd8448cc63f0a075c4.dir
+      size: 153771
+      nfiles: 4
+    - path: training/src/train_model.py
+      md5: c8a08a7e47fac5d5b31ef87737c9feee
+      size: 3277
+    outs:
+    - path: models/xgboost
+      md5: 517a6fc5eb3f434d3ad13c7a119ca313
+      size: 19616
