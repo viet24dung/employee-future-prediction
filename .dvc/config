@@ -1,5 +1,4 @@
+[core]
+    remote = origin
 ['remote "origin"']
-    url = https://dagshub.com/thaonguyen274/employee-future-prediction.dvc
-    verify = true
-    user = thaonguyen274
-    password = Ntt272201@
+    url = s3://dvc
