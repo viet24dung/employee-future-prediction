@@ -1,0 +1,93 @@
+name: Adjust notebook
+on: [push]
+
+jobs:
+  add_badges:
+    name: Add Google Colab badge to notebook
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 
+        id: checkout
+        uses: actions/checkout@v3
+
+      - name: Add/Update badges
+        id: badges
+        uses: trsvchn/colab-badge-action@v4
+        with:
+          check: "all"
+          target_branch: master
+          target_repository: thaonguyen274/employee-future-prediciton
+          update: true
+      
+      - name: Add, commit, and push changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: Add Colab badge
+          push: true
+<<<<<<< HEAD
+  # black:
+  #   name: Black Check for Jupyter notebooks
+  #   runs-on: ubuntu-latest
+  #   steps: 
+  #     - name: Checkout 
+  #       id: checkout
+  #       uses: actions/checkout@v3
+||||||| 90ffeb4
+  black:
+    name: Black Check for Jupyter notebooks
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Checkout 
+        id: checkout
+        uses: actions/checkout@v2
+=======
+#   black:
+#     name: Black Check for Jupyter notebooks
+#     runs-on: ubuntu-latest
+#     steps: 
+#       - name: Checkout 
+#         id: checkout
+#         uses: actions/checkout@v2
+>>>>>>> 3da9da55beea70158fdf0707ffabfad9e0f5a9e3
+
+<<<<<<< HEAD
+  #     - name: black
+  #       uses: jpetrucciani/black-check@master
+  #       with:
+  #         path: '.'
+  #         black_flags: '--exclude ./env/'
+||||||| 90ffeb4
+      - name: black
+        uses: jpetrucciani/black-check@master
+        with:
+          path: '.'
+          black_flags: '--exclude ./env/'
+=======
+#       - name: black
+#         uses: jpetrucciani/black-check@master
+#         with:
+#           path: '.'
+#           black_flags: '--exclude ./env/'
+>>>>>>> 3da9da55beea70158fdf0707ffabfad9e0f5a9e3
+      
+<<<<<<< HEAD
+  #     - name: Add, commit, and push changes
+  #       uses: EndBug/add-and-commit@v9
+  #       with:
+  #         message: black check
+  #         push: true
+||||||| 90ffeb4
+      - name: Add, commit, and push changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: black check
+          push: true
+=======
+#       - name: Add, commit, and push changes
+#         uses: EndBug/add-and-commit@v9
+#         with:
+#           message: black check
+#           push: true
+>>>>>>> 3da9da55beea70158fdf0707ffabfad9e0f5a9e3
+
+      
