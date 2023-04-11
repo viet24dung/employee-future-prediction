@@ -32,7 +32,6 @@ def get_objective(
     config: DictConfig,
     space: dict,
 ):
-
     model = XGBClassifier(
         use_label_encoder=config.model.use_label_encoder,
         objective=config.model.objective,

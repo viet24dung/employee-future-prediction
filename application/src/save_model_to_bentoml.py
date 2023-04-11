@@ -15,5 +15,6 @@ def save_to_bentoml(config: DictConfig):
     # bentoml.picklable_model.save(config.model.name, model)
     bentoml.xgboost.save_model(config.model.name, model)
 
+
 if __name__ == "__main__":
     save_to_bentoml()

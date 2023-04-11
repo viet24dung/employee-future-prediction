@@ -1,2 +1,4 @@
+[core]
+    remote = origin
 ['remote "origin"']
-    url = https://dagshub.com/thaonguyen274/employee-future-prediction.dvc
+    url = https://github.com/thaonguyen274/employee-future-prediction.git

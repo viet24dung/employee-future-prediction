@@ -12,7 +12,7 @@ from hydra.utils import to_absolute_path as abspath
 from omegaconf import DictConfig
 from sklearn.metrics import accuracy_score, f1_score
 from xgboost import XGBClassifier
-import os 
+import os
 
 logger = BaseLogger()
 
@@ -48,13 +48,11 @@ def log_metrics(**metrics: dict):
 @hydra.main(version_base=None, config_path="../../config", config_name="main")
 def evaluate(config: DictConfig):
     mlflow.set_tracking_uri(config.mlflow_tracking_ui)
-    os.environ['MLFLOW_TRACKING_USERNAME'] = config.mlflow_USERNAME
-    os.environ['MLFLOW_TRACKING_PASSWORD'] = config.mlflow_PASSWORD 
+    os.environ["MLFLOW_TRACKING_USERNAME"] = config.mlflow_USERNAME
+    os.environ["MLFLOW_TRACKING_PASSWORD"] = config.mlflow_PASSWORD
     # dagshub.init("employee-future-prediction", "thaonguyen274", mlflow=True)
 
-
     with mlflow.start_run():
-
         # Load data and model
         X_test, y_test = load_data(config.processed)
 
