@@ -8,7 +8,7 @@ early_stopping_rounds: null
 enable_categorical: false
 eval_metric: null
 features: '[''City'', ''PaymentTier'', ''Age'', ''Gender'', ''EverBenched'', ''ExperienceInCurrentDomain'']'
-gamma: 8.199500818821548
+gamma: 7.0494837805015225
 gpu_id: -1
 grow_policy: depthwise
 importance_type: null
@@ -17,9 +17,9 @@ learning_rate: 0.300000012
 max_bin: 256
 max_cat_to_onehot: 4
 max_delta_step: 0
-max_depth: 4
+max_depth: 16
 max_leaves: 0
-min_child_weight: 1
+min_child_weight: 5
 missing: .nan
 model_class: XGBClassifier
 monotone_constraints: ()
