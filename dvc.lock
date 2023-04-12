@@ -11,8 +11,8 @@ stages:
       size: 195247
       nfiles: 1
     - path: training/src/process.py
-      md5: 727db878f2a490a6c4543b1e371316ac
-      size: 1448
+      md5: 33f4499bae9b6e7fd1d10734dd1b54c2
+      size: 1449
     outs:
     - path: data/processed
       md5: f3583e9b8f983f8873a456e79a2c234d.dir
