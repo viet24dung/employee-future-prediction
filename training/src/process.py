@@ -44,7 +44,7 @@ def process_data(config: DictConfig):
     X_test.to_csv(abspath(config.processed.X_test.path), index=False)
     y_train.to_csv(abspath(config.processed.y_train.path), index=False)
     y_test.to_csv(abspath(config.processed.y_test.path), index=False)
-
+    print(X, y)
 
 if __name__ == "__main__":
     process_data()

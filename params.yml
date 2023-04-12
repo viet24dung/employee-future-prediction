@@ -7,8 +7,8 @@ colsample_bytree: 0
 early_stopping_rounds: null
 enable_categorical: false
 eval_metric: null
-features: '[''City'', ''PaymentTier'', ''Age'', ''EverBenched'', ''ExperienceInCurrentDomain'']'
-gamma: 5.241677028362373
+features: '[''City'', ''PaymentTier'', ''Age'', ''Gender'', ''EverBenched'', ''ExperienceInCurrentDomain'']'
+gamma: 8.199500818821548
 gpu_id: -1
 grow_policy: depthwise
 importance_type: null
@@ -19,7 +19,7 @@ max_cat_to_onehot: 4
 max_delta_step: 0
 max_depth: 4
 max_leaves: 0
-min_child_weight: 5
+min_child_weight: 1
 missing: .nan
 model_class: XGBClassifier
 monotone_constraints: ()
@@ -29,7 +29,7 @@ num_parallel_tree: 1
 objective: binary:logistic
 predictor: auto
 random_state: 0
-reg_alpha: 43
+reg_alpha: 49
 reg_lambda: 1
 sampling_method: uniform
 scale_pos_weight: 1

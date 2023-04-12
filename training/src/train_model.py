@@ -52,6 +52,7 @@ def get_objective(
         eval_metric=config.model.eval_metric,
         early_stopping_rounds=config.model.early_stopping_rounds,
     )
+    # print(evaluation)
     prediction = model.predict(X_test.values)
     accuracy = accuracy_score(y_test, prediction)
     print("SCORE:", accuracy)
@@ -99,8 +100,7 @@ def train(config: DictConfig):
     objective = partial(
         get_objective, X_train, y_train, X_test, y_test, config
     )
-
-    # Find best model
+    # # Find best model
     best_model = optimize(objective, space)
 
     # Save model

@@ -49,4 +49,4 @@ jobs:
           bentoml serve ./application/src/create_service.py:service  & 
           sleep 10
           pytest application/tests
-          kill -9 `lsof -i:3000 -t`
+          kill -9 `lsof -i:300

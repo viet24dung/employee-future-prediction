@@ -1,7 +1,7 @@
 import joblib
 import pandas as pd
 from deepchecks.tabular import Dataset
-from deepchecks.tabular.checks import ModelErrorAnalysis
+from deepchecks.tabular.checks import RocReport, PredictionDrift
 from hydra import compose, initialize
 from hydra.utils import to_absolute_path as abspath
 
@@ -21,5 +21,7 @@ def test_xgboost():
     train_ds = Dataset(train_df, label="LeaveOrNot")
     validation_ds = Dataset(test_df, label="LeaveOrNot")
 
-    check = ModelErrorAnalysis(min_error_model_score=0.3)
-    check.run(train_ds, validation_ds, model)
+    check = RocReport()
+    check.run(validation_ds, model)
+
+    

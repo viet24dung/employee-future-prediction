@@ -48,10 +48,12 @@ def transform_data(df: pd.DataFrame):
     feature_str = " + ".join(FEATURES)
     dummy_X = dmatrix(f"{feature_str} - 1", dummy_df, return_type="dataframe")
     dummy_X = rename_columns(dummy_X)
+    print(dummy_X.iloc[0, :].values.reshape(1, -1))
     return dummy_X.iloc[0, :].values.reshape(1, -1)
 
 
 model = bentoml.xgboost.get("xgboost:latest").to_runner()
+# model = joblib.load('../models/xgboost')
 
 # Create service with the model
 service = bentoml.Service("predict_employee", runners=[model])
@@ -62,5 +64,6 @@ def predict(employee: Employee) -> np.ndarray:
     """Transform the data then make predictions"""
     df = pd.DataFrame(employee.dict(), index=[0])
     df = transform_data(df)
+    df = pd.DataFrame(df, columns=['City_Bangalore','City_New Delhi','City_Pune','Gender_T.Male','EverBenched_T.Yes','PaymentTier','Age','ExperienceInCurrentDomain'])
     result = model.run(df)[0]
     return np.array(result)

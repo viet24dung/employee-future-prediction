@@ -17,7 +17,7 @@ def get_features_step(steps_data):
     data = pd.DataFrame(
         {
             "Education": ["Bachelors", "Masters"],
-            "City": ["Bangalore", "Prune"],
+            "City": ["Bangalore", "Pune"],
             "PaymentTier": [2, 3],
             "Age": [30, 21],
             "Gender": ["Male", "Female"],
@@ -39,7 +39,7 @@ def get_features_step(steps_data):
     schema = DataFrameSchema(
         {
             "City[Bangalore]": Column(float, Check.isin([0.0, 1.0])),
-            "City[Prune]": Column(float, Check.isin([0.0, 1.0])),
+            "City[Pune]": Column(float, Check.isin([0.0, 1.0])),
             "Gender[T.Male]": Column(float, Check.isin([0.0, 1.0])),
             "EverBenched[T.Yes]": Column(float, Check.isin([0.0, 1.0])),
             "PaymentTier": Column(float, Check.isin([1, 2, 3])),
@@ -57,7 +57,7 @@ def rename_columns_step(steps_data):
     processed_X = rename_columns(steps_data.X)
     assert list(processed_X.columns) == [
         "City_Bangalore",
-        "City_Prune",
+        "City_Pune",
         "Gender_T.Male",
         "EverBenched_T.Yes",
         "PaymentTier",

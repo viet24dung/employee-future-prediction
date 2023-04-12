@@ -3,5 +3,6 @@ features:
   - City
   - PaymentTier
   - Age
+  - Gender
   - EverBenched
   - ExperienceInCurrentDomain
