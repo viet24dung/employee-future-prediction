@@ -23,5 +23,3 @@ def test_xgboost():
 
     check = RocReport()
     check.run(validation_ds, model)
-
-    

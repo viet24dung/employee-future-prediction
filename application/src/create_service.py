@@ -64,6 +64,18 @@ def predict(employee: Employee) -> np.ndarray:
     """Transform the data then make predictions"""
     df = pd.DataFrame(employee.dict(), index=[0])
     df = transform_data(df)
-    df = pd.DataFrame(df, columns=['City_Bangalore','City_New Delhi','City_Pune','Gender_T.Male','EverBenched_T.Yes','PaymentTier','Age','ExperienceInCurrentDomain'])
+    df = pd.DataFrame(
+        df,
+        columns=[
+            "City_Bangalore",
+            "City_New Delhi",
+            "City_Pune",
+            "Gender_T.Male",
+            "EverBenched_T.Yes",
+            "PaymentTier",
+            "Age",
+            "ExperienceInCurrentDomain",
+        ],
+    )
     result = model.run(df)[0]
     return np.array(result)
