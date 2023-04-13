@@ -38,7 +38,7 @@ jobs:
 
       - name: Pull data
         run: |
-          dvc remote add origin https://github.com/viet24dung/employee-future-prediction.git
+          dvc remote add origin https://github.com/viet24dung/employee-future-prediction.git -f
           dvc remote modify origin --local auth basic
           dvc remote modify origin --local user ${{ secrets.DAGSHUB_USERNAME }}
           dvc remote modify origin --local password ${{ secrets.DAGSHUB_TOKEN }}
