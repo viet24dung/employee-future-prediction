@@ -36,12 +36,12 @@ jobs:
       - name: Install packages
         run: pip install -r application/requirements.txt
 
-       - name: Pull data
-         run: |
-           dvc remote modify origin --local auth basic
-           dvc remote modify origin --local user ${{ secrets.DAGSHUB_USERNAME }}
-           dvc remote modify origin --local password ${{ secrets.DAGSHUB_TOKEN }}
-           dvc pull -r origin train_model
+      - name: Pull data
+        run: |
+          dvc remote modify origin --local auth basic
+          dvc remote modify origin --local user ${{ secrets.DAGSHUB_USERNAME }}
+          dvc remote modify origin --local password ${{ secrets.DAGSHUB_TOKEN }}
+          dvc pull -r origin train_model
 
       - name: Save model to BentoML local store
         run: python application/src/save_model_to_bentoml.py
