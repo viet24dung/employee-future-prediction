@@ -1,6 +1,0 @@
-outs:
-- path: models
-  files:
-  - relpath: xgboost
-    md5: f5372ad8507a970fda4fed8feb899656
-    size: 31496
