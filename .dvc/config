@@ -1,4 +1,4 @@
 [core]
     remote = origin
 ['remote "origin"']
-    url = https://github.com/thaonguyen274/employee-future-prediction.git
+    url = "https://github.com/viet24dung/employee-future-prediction.git"
