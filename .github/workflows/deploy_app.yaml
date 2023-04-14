@@ -18,16 +18,16 @@ jobs:
     steps:
       - name: Checkout
         id: checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
       - name: Environment setup
-        uses: actions/setup-python@v3
+        uses: actions/setup-python@v2
         with:
           python-version: 3.8
           cache: pip
 
       - name: Cache
-        uses: actions/cache@v3
+        uses: actions/cache@v2
         with:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ hashFiles('**/application/requirements.txt') }}
@@ -38,7 +38,6 @@ jobs:
 
       - name: Pull data
         run: |
-          dvc remote add origin https://github.com/viet24dung/employee-future-prediction.git -f
           dvc remote modify origin --local auth basic
           dvc remote modify origin --local user ${{ secrets.DAGSHUB_USERNAME }}
           dvc remote modify origin --local password ${{ secrets.DAGSHUB_TOKEN }}
